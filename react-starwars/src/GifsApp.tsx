@@ -26,9 +26,9 @@ export const GifsApp = () => {
       </div>
 
       {/* Gifs */}
-      <div className="gifs-container">
+      <div className="images-container">
         {mockGifs.map((gif) => (
-          <div key={gif.id} className="gif-card">
+          <div key={gif.id} className="images-card">
             <img src={gif.image} alt={gif.name} />
             <h3>{gif.name}</h3>
           </div>
