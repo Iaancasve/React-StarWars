@@ -1,4 +1,4 @@
-export interface Gif {
+export interface Image {
   id: string;
   name: string;
   image: string;
@@ -6,7 +6,7 @@ export interface Gif {
   height: number;
 }
 
-export const mockGifs: Gif[] = [
+export const mockImage: Image[] = [
     {
         id: '1',
         name: 'Luke Skywalker',

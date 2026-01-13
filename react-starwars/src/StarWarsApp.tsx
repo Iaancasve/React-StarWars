@@ -1,6 +1,6 @@
-import { mockGifs } from "./mock-data/gifs.mock";
+import { mockImage } from "./mock-data/images.mock";
 
-export const GifsApp = () => {
+export const StarwarsApp = () => {
   return (
     <>
       {/*Header */}
@@ -27,10 +27,10 @@ export const GifsApp = () => {
 
       {/* Gifs */}
       <div className="images-container">
-        {mockGifs.map((gif) => (
-          <div key={gif.id} className="images-card">
-            <img src={gif.image} alt={gif.name} />
-            <h3>{gif.name}</h3>
+        {mockImage.map((image) => (
+          <div key={image.id} className="images-card">
+            <img src={image.image} alt={image.name} />
+            <h3>{image.name}</h3>
           </div>
         ))}
       </div>

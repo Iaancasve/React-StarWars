@@ -1,11 +1,11 @@
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 import './index.css'
-import { GifsApp } from './GifsApp'
+import { StarwarsApp } from './StarWarsApp'
 
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
-    <GifsApp/>
+    <StarwarsApp/>
   </StrictMode>,
 )
