@@ -1,36 +1,32 @@
-import { mockImage } from "./mock-data/images.mock";
+import { PreviousSearches } from "./gifs/components/PreviousSearches";
+import { mockImage } from "./mock-data/images.mock.ts";
+import { CustomHeader } from "./shared/components/CustomHeader";
+import { SearchBar } from "./shared/components/SearchBar";
 
-export const StarwarsApp = () => {
+export const StarWarsApp = () => {
   return (
     <>
-      {/*Header */}
-      <div className="content-center">
-        <h1>Buscador de STARWARS</h1>
-        <p>Descubre el personaje perfecto</p>
-      </div>
+      {/* Header */}
+      <CustomHeader
+        title="Buscador de Gifs"
+        description="Descubre y comparte el gif perfecto"
+      />
 
       {/* Search */}
-      <div className="search-container">
-        <input type="text" placeholder="buscar personaje" />
-        <button>Buscar</button>
-      </div>
+      <SearchBar placeholder="Busca lo que quieras"/>
 
       {/* Búsquedas previas*/}
-      <div className="previous-searches">
-        <h2>Búsquedas Previas</h2>
-        <ul className="previous-searches-list">
-          <li>Humano</li>
-          <li>Villano</li>
-          <li>Nave</li>
-        </ul>
-      </div>
+      <PreviousSearches />
 
       {/* Gifs */}
       <div className="images-container">
-        {mockImage.map((image) => (
-          <div key={image.id} className="images-card">
-            <img src={image.image} alt={image.name} />
-            <h3>{image.name}</h3>
+        {mockImage.map((mockImage) => (
+          <div key={mockImage.id} className="images-card">
+            <img src={mockImage.image} alt={mockImage.name} />
+            <h3>{mockImage.name}</h3>
+            <p>
+              {mockImage.width}x{mockImage.height} (1.5mb)
+            </p>
           </div>
         ))}
       </div>
