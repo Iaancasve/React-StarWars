@@ -12,7 +12,11 @@ export const StarWarsApp = () => {
   const handleTermClicked = (term: string) => {
     console.log(`Term clicked: ${term}`);
   }
-  
+
+  const handleSearch = (query: string) => {
+    console.log(query);
+  };
+
   return (
     <>
       {/* Header */}
@@ -22,7 +26,8 @@ export const StarWarsApp = () => {
       />
 
       {/* Search */}
-      <SearchBar placeholder="Busca lo que quieras"/>
+      <SearchBar placeholder="Busca lo que quieras"
+      onQuery={handleSearch}/>
 
       {/* Búsquedas previas*/}
       <PreviousSearches searches={previousTerms} onLabelClicked={handleTermClicked}/>
